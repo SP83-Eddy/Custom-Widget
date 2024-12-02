@@ -1,0 +1,58 @@
+{
+    "name": "BurndownChart",
+    "id": "com.custom.burndownchart",
+    "type": "widget",
+    "description": "A custom widget to display a burndown chart with styled container and title",
+    "author": "Shikha",
+    "version": "1.0.0",
+    "resources": {
+        "script": "burndownchart.js",
+        "css": "burndownchart.css"
+    },
+    "properties": {
+        "title": {
+            "type": "string",
+            "defaultValue": "Burndown Chart"
+        },
+        "plannedWorkColor": {
+            "type": "string",
+            "defaultValue": "#FF0000"
+        },
+        "completedWorkColor": {
+            "type": "string",
+            "defaultValue": "#00FF00"
+        },
+        "containerStyles": {
+            "type": "object",
+            "defaultValue": {
+                "backgroundColor": "#f9f9f9",
+                "border": "1px solid #e0e0e0",
+                "borderRadius": "5px",
+                "padding": "10px",
+                "boxShadow": "0 2px 4px rgba(0, 0, 0, 0.1)"
+            }
+        },
+        "titleStyles": {
+            "type": "object",
+            "defaultValue": {
+                "fontSize": "16px",
+                "fontWeight": "bold",
+                "color": "#333",
+                "textAlign": "center",
+                "marginBottom": "10px"
+            }
+        }
+    },
+    "data": {
+        "binding": {
+            "type": "resultSet",
+            "required": true,
+            "description": "Data for the burndown chart",
+            "structure": [
+                { "key": "date", "dataType": "dimension" },
+                { "key": "plannedWork", "dataType": "measure" },
+                { "key": "completedWork", "dataType": "measure" }
+            ]
+        }
+    }
+}
