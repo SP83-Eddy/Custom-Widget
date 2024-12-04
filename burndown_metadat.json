@@ -1,6 +1,6 @@
 {
     "eula": "",
-    "vendor": "Shikha",
+    "vendor": "SAP",
     "license": "",
     "id": "com.custom.burndownchart",
     "icon": "",
@@ -13,7 +13,7 @@
             "kind": "main",
             "tag": "com-custom-burndownchart",
             "url": "/burndownchart.js",
-            "integrity": "sha256-PI50VF9gRW/DjtiVXIQkSvfy9YKiOf3tQ0F6S7tBDzI=",
+            "integrity": " ",
             "ignoreIntegrity": false
         }
     ],
