@@ -1,57 +1,59 @@
 {
-    "name": "BurndownChart",
+    "eula": "",
+    "vendor": "Shikha",
+    "license": "",
     "id": "com.custom.burndownchart",
-    "type": "widget",
-    "description": "A custom widget to display a burndown chart with styled container and title",
-    "author": "Shikha",
+    "icon": "",
     "version": "1.0.0",
-    "resources": {
-        "script": "burndownchart.js",
-        "css": "burndownchart.css"
-    },
+    "name": "Burndown Chart",
+    "newInstancePrefix": "BurndownChart",
+    "description": "A custom widget to display a burndown chart with styled container and title",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-custom-burndownchart",
+            "url": "https://raw.githubusercontent.com/SP83-Eddy/Custom-Widget/refs/heads/main/burndownchart.js",
+            "integrity": "sha256-PI50VF9gRW/DjtiVXIQkSvfy9YKiOf3tQ0F6S7tBDzI=",
+            "ignoreIntegrity": false
+        }
+    ],
     "properties": {
         "title": {
             "type": "string",
-            "defaultValue": "Burndown Chart"
+            "default": "Burndown Chart"
         },
         "plannedWorkColor": {
             "type": "string",
-            "defaultValue": "#FF0000"
+            "default": "#FF0000"
         },
         "completedWorkColor": {
             "type": "string",
-            "defaultValue": "#00FF00"
+            "default": "#00FF00"
         },
-        "containerStyles": {
-            "type": "object",
-            "defaultValue": {
-                "backgroundColor": "#f9f9f9",
-                "border": "1px solid #e0e0e0",
-                "borderRadius": "5px",
-                "padding": "10px",
-                "boxShadow": "0 2px 4px rgba(0, 0, 0, 0.1)"
-            }
+        "width": {
+            "type": "integer",
+            "default": 600
         },
-        "titleStyles": {
-            "type": "object",
-            "defaultValue": {
-                "fontSize": "16px",
-                "fontWeight": "bold",
-                "color": "#333",
-                "textAlign": "center",
-                "marginBottom": "10px"
-            }
+        "height": {
+            "type": "integer",
+            "default": 420
         }
     },
-    "data": {
-        "binding": {
-            "type": "resultSet",
-            "required": true,
-            "description": "Data for the burndown chart",
-            "structure": [
-                { "key": "date", "dataType": "dimension" },
-                { "key": "plannedWork", "dataType": "measure" },
-                { "key": "completedWork", "dataType": "measure" }
+    "methods": {},
+    "events": {},
+    "dataBindings": {
+        "dataBinding": {
+            "feeds": [
+                {
+                    "id": "dimensions",
+                    "description": "Dimensions",
+                    "type": "dimension"
+                },
+                {
+                    "id": "measures",
+                    "description": "Measures",
+                    "type": "mainStructureMember"
+                }
             ]
         }
     }
