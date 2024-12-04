@@ -1,5 +1,35 @@
-// import * as echarts from './echarts.js';
+// Import ECharts from CDN
 import * as echarts from 'https://cdn.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.esm.min.js';
+
+// Function to inject CSS dynamically
+function injectCSS() {
+  const style = document.createElement("style");
+  style.textContent = `
+    /* General styling for the widget container */
+    #chart-container {
+        width: 600px;
+        height: 400px;
+        background-color: #f9f9f9;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling for chart title */
+    .echarts-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+// Call the function to inject CSS
+injectCSS();
 
 document.addEventListener('DOMContentLoaded', () => {
   const chartContainer = document.getElementById("chart-container");
