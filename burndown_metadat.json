@@ -14,7 +14,7 @@
             "tag": "com-custom-burndownchart",
             "url": "/burndownchart.js",
             "integrity": " ",
-            "ignoreIntegrity": false
+            "ignoreIntegrity": true
         }
     ],
     "properties": {
