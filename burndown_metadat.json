@@ -12,7 +12,7 @@
         {
             "kind": "main",
             "tag": "com-custom-burndownchart",
-            "url": "https://raw.githubusercontent.com/SP83-Eddy/Custom-Widget/refs/heads/main/burndownchart.js",
+            "url": "/burndownchart.js",
             "integrity": "sha256-PI50VF9gRW/DjtiVXIQkSvfy9YKiOf3tQ0F6S7tBDzI=",
             "ignoreIntegrity": false
         }
